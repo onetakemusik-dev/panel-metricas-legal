@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Panel de Métricas ADAN</title>
+<meta name="description" content="Política de privacidad de Panel de Métricas ADAN: qué datos de Google se acceden, para qué se usan, dónde se guardan y cómo revocar el acceso.">
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --line:#30363d; --text:#e6edf3;
+    --muted:#9ba7b4; --accent:#4da3ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:28px 22px 64px}
+  header.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:34px}
+  .brand{font-weight:700;letter-spacing:.2px}
+  .brand small{display:block;font-weight:400;color:var(--muted);font-size:13px;letter-spacing:0}
+  nav.top-nav{display:flex;gap:18px;align-items:center;font-size:14px}
+  nav.top-nav a{color:var(--muted);text-decoration:none}
+  nav.top-nav a:hover{color:var(--accent)}
+  .lang{display:flex;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .lang button{background:transparent;color:var(--muted);border:0;padding:6px 12px;font-size:13px;
+    cursor:pointer;font-family:inherit}
+  .lang button[aria-pressed="true"]{background:#21262d;color:var(--text);font-weight:600}
+  h1{font-size:28px;line-height:1.25;margin:0 0 6px}
+  h2{font-size:18px;margin:32px 0 8px;padding-top:6px}
+  p{margin:0 0 14px}
+  .updated{color:var(--muted);font-size:14px;margin-bottom:28px}
+  ul{padding-left:22px;margin:0 0 14px}
+  li{margin-bottom:8px}
+  a{color:var(--accent)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:22px 0}
+  .card p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;font-size:15px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+  code{background:#21262d;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:14px}
+  .i{display:block}
+  html[data-lang="es"] .i.en{display:none}
+  html[data-lang="en"] .i.es{display:none}
+  html[data-lang="en"] .i.en{display:block}
+  html[data-lang="es"] .i.es{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">Panel de Métricas ADAN
+      <small><span class="i es">Política de privacidad</span><span class="i en">Privacy policy</span></small>
+    </div>
+    <nav class="top-nav">
+      <a href="index.html"><span class="i es">Inicio</span><span class="i en">Home</span></a>
+      <a href="mailto:ONETAKEMUSIK@gmail.com">Contacto</a>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ ESPAÑOL ============ -->
+  <main class="i es">
+    <h1>Política de privacidad</h1>
+    <p class="updated">Última actualización: 8 de noviembre de 2026</p>
+
+    <p>Esta política explica cómo la aplicación <strong>Panel de Métricas ADAN</strong> (en adelante, «la aplicación») accede, usa y almacena datos, incluidos los datos obtenidos de las API de Google.</p>
+
+    <h2>1. Quién está detrás</h2>
+    <p>La aplicación es un proyecto personal de Napo, desarrollado en la República Dominicana, para la gestión del canal de YouTube del artista ADAN. Responsable del tratamiento y contacto: <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>.</p>
+
+    <h2>2. Datos a los que accedemos</h2>
+    <p>La aplicación solo pide los permisos necesarios para leer estadísticas, siempre en <strong>modo solo lectura</strong>:</p>
+    <table>
+      <tr><th>Fuente</th><th>Qué se lee</th></tr>
+      <tr>
+        <td>YouTube Analytics API</td>
+        <td>Con el permiso <code>yt-analytics.readonly</code>: vistas, tiempo de visualización, retención de audiencia, fuentes de tráfico, países, edad, género, suscriptores ganados y perdidos, y desglose por tipo de contenido (vídeos y Shorts).</td>
+      </tr>
+      <tr>
+        <td>YouTube Data API v3</td>
+        <td>Datos públicos del canal y de sus vídeos: título, fecha de publicación, duración, vistas, «me gusta» y comentarios. No se accede a datos privados de los espectadores.</td>
+      </tr>
+    </table>
+    <p>La aplicación <strong>no</strong> accede a contraseñas, correos electrónicos, contactos, mensajes, archivos, calendario ni a ninguna otra información de la cuenta de Google. Nunca modifica el canal: no publica, no edita ni borra contenido.</p>
+
+    <h2>3. Para qué se usan</h2>
+    <ul>
+      <li>Generar reportes internos y gráficas de evolución del propio canal.</li>
+      <li>Producir recomendaciones de contenido y de colaboraciones para el equipo del artista.</li>
+      <li>Enviar resúmenes periódicos al equipo por Telegram, cuando se solicitan.</li>
+    </ul>
+    <p>Los datos no se usan para publicidad, ni para perfilado comercial, ni para entrenar modelos de inteligencia artificial.</p>
+
+    <h2>4. Dónde se guardan</h2>
+    <p>Los datos se almacenan <strong>únicamente en el ordenador del responsable</strong>, en una base de datos SQLite dentro de un contenedor Docker local. No se envían a servidores propios, no se alojan en la nube y no se suben a ningún repositorio público. Las credenciales de acceso a Google se guardan en el mismo equipo, en un archivo de configuración local excluido de cualquier copia pública.</p>
+    <p>Se conservan fotos de métricas cada hora durante 45 días; a partir de ahí, se conserva una foto por día. En cualquier momento se pueden eliminar por completo borrando el volumen de datos de Docker del equipo.</p>
+
+    <h2>5. Con quién se comparten</h2>
+    <p><strong>No se venden, alquilan ni comparten con terceros.</strong> No se usan para publicidad ni para elaborar perfiles de usuarios.</p>
+    <p>La única salida de datos fuera del equipo es el resumen que el responsable solicita expresamente al bot de Telegram, y que se envía únicamente a los chats del propio equipo que estén en la lista de permitidos de ese bot (un número reducido de personas que gestionan el canal).</p>
+
+    <h2>6. Seguridad</h2>
+    <p>El panel solo es accesible desde el propio ordenador (red local, con contraseña opcional), el bot rechaza cualquier chat no autorizado y las claves se mantienen fuera del código y fuera de repositorios públicos.</p>
+
+    <h2>7. Cómo revocar el acceso y borrar los datos</h2>
+    <ul>
+      <li>Revocar el permiso de la aplicación en cualquier momento desde <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. Al hacerlo, la aplicación deja de poder leer datos del canal de inmediato.</li>
+      <li>Solicitar el borrado de los datos almacenados escribiendo a <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>. Se eliminan en un plazo máximo de 30 días.</li>
+    </ul>
+
+    <h2>8. Uso limitado de los datos de Google</h2>
+    <div class="card">
+      <p>El uso que Panel de Métricas ADAN hace de la información recibida de las API de Google se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Datos de Usuario de los Servicios API de Google</a>, incluidos los requisitos de <strong>Uso Limitado (Limited Use)</strong>.</p>
+      <p>En concreto: los datos de Google solo se usan para las funciones descritas en esta política, no se venden a terceros, no se usan con fines publicitarios, no se usan para determinar solvencia ni para préstamos, y ninguna persona puede leerlos salvo el responsable del proyecto y el equipo autorizado del canal.</p>
+    </div>
+
+    <h2>9. Cambios en esta política</h2>
+    <p>Si cambia la forma en que se tratan los datos, se actualizará esta página con una nueva fecha de revisión.</p>
+
+    <h2>10. Contacto</h2>
+    <p><a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a></p>
+  </main>
+
+  <!-- ============ ENGLISH ============ -->
+  <main class="i en">
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated: November 8, 2026</p>
+
+    <p>This policy explains how the <strong>ADAN Metrics Panel</strong> application (the "application") accesses, uses and stores data, including data obtained from Google APIs.</p>
+
+    <h2>1. Who is behind it</h2>
+    <p>The application is a personal project by Napo, developed in the Dominican Republic, for managing the YouTube channel of the artist ADAN. Data controller and contact: <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>.</p>
+
+    <h2>2. Data we access</h2>
+    <p>The application only requests the permissions needed to read statistics, always <strong>read-only</strong>:</p>
+    <table>
+      <tr><th>Source</th><th>What is read</th></tr>
+      <tr>
+        <td>YouTube Analytics API</td>
+        <td>With the <code>yt-analytics.readonly</code> scope: views, watch time, audience retention, traffic sources, countries, age, gender, subscribers gained and lost, and breakdown by content type (videos and Shorts).</td>
+      </tr>
+      <tr>
+        <td>YouTube Data API v3</td>
+        <td>Public channel and video data: title, publish date, duration, views, likes and comments. No private viewer data is accessed.</td>
+      </tr>
+    </table>
+    <p>The application does <strong>not</strong> access passwords, emails, contacts, messages, files, calendar or any other Google account information. It never modifies the channel: it does not publish, edit or delete content.</p>
+
+    <h2>3. How it is used</h2>
+    <ul>
+      <li>To produce internal reports and growth charts for the channel itself.</li>
+      <li>To generate content and collaboration recommendations for the artist's team.</li>
+      <li>To send periodic summaries to the team via Telegram, when requested.</li>
+    </ul>
+    <p>The data is not used for advertising, commercial profiling, or training artificial intelligence models.</p>
+
+    <h2>4. Where it is stored</h2>
+    <p>Data is stored <strong>only on the controller's own computer</strong>, in a SQLite database inside a local Docker container. It is not sent to our own servers, not hosted in the cloud, and not uploaded to any public repository. Google credentials are also stored on that same machine, in a local configuration file excluded from any public copy.</p>
+    <p>Hourly metric snapshots are kept for 45 days; after that, one snapshot per day is kept. You can delete everything at any time by removing the Docker data volume on that machine.</p>
+
+    <h2>5. Who it is shared with</h2>
+    <p><strong>It is never sold, rented or shared with third parties.</strong> It is not used for advertising or to build user profiles.</p>
+    <p>The only data leaving the machine is the summary the controller explicitly requests from the Telegram bot, and it is sent only to the team's own chats on that bot's allow-list (a small number of people managing the channel).</p>
+
+    <h2>6. Security</h2>
+    <p>The dashboard is only reachable from the local machine (local network, with an optional password), the bot rejects any unauthorized chat, and keys are kept out of the source code and out of public repositories.</p>
+
+    <h2>7. How to revoke access and delete data</h2>
+    <ul>
+      <li>Revoke the application's permission at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. The application immediately loses the ability to read channel data.</li>
+      <li>Request deletion of stored data by writing to <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>. Data is deleted within 30 days at most.</li>
+    </ul>
+
+    <h2>8. Limited Use of Google data</h2>
+    <div class="card">
+      <p>ADAN Metrics Panel's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements.</p>
+      <p>Specifically: Google data is used only for the features described in this policy, it is not sold to third parties, not used for advertising, not used to determine creditworthiness or for lending purposes, and no one can read it except the project owner and the channel's authorized team.</p>
+    </div>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If the way data is handled changes, this page will be updated with a new revision date.</p>
+
+    <h2>10. Contact</h2>
+    <p><a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a></p>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> Panel de Métricas ADAN</span>
+    <span><a href="index.html"><span class="i es">Volver al inicio</span><span class="i en">Back to home</span></a></span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    function apply(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      var btns = document.querySelectorAll('[data-set-lang]');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].setAttribute('aria-pressed', String(btns[i].dataset.setLang === lang));
+      }
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    if (saved === 'en' || saved === 'es') { apply(saved); }
+    var btns = document.querySelectorAll('[data-set-lang]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () { apply(this.dataset.setLang); });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>

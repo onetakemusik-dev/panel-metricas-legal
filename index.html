@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de Métricas ADAN — aplicación de análisis de YouTube</title>
+<meta name="description" content="Herramienta personal de análisis que lee en solo lectura las estadísticas del canal de YouTube de ADAN para generar reportes internos.">
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --line:#30363d; --text:#e6edf3;
+    --muted:#9ba7b4; --accent:#4da3ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:28px 22px 64px}
+  header.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:34px}
+  .brand{font-weight:700;letter-spacing:.2px}
+  .brand small{display:block;font-weight:400;color:var(--muted);font-size:13px;letter-spacing:0}
+  nav.top-nav{display:flex;gap:18px;align-items:center;font-size:14px}
+  nav.top-nav a{color:var(--muted);text-decoration:none}
+  nav.top-nav a:hover{color:var(--accent)}
+  .lang{display:flex;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .lang button{
+    background:transparent;color:var(--muted);border:0;padding:6px 12px;font-size:13px;
+    cursor:pointer;font-family:inherit;
+  }
+  .lang button[aria-pressed="true"]{background:#21262d;color:var(--text);font-weight:600}
+  h1{font-size:30px;line-height:1.25;margin:0 0 12px}
+  h2{font-size:19px;margin:34px 0 10px}
+  p{margin:0 0 14px}
+  .lead{font-size:18px;color:#c9d4e0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:22px 0}
+  ul{padding-left:22px;margin:0 0 14px}
+  li{margin-bottom:8px}
+  a{color:var(--accent)}
+  .note{font-size:14px;color:var(--muted)}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+  code{background:#21262d;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:14px}
+  .i{display:block}
+  html[data-lang="es"] .i.en{display:none}
+  html[data-lang="en"] .i.es{display:none}
+  html[data-lang="en"] .i.en{display:block}
+  html[data-lang="es"] .i.es{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">Panel de Métricas ADAN
+      <small><span class="i es">Herramienta privada de análisis — canal de YouTube de ADAN</span><span class="i en">Private analytics tool — ADAN's YouTube channel</span></small>
+    </div>
+    <nav class="top-nav">
+      <a href="privacy.html"><span class="i es">Privacidad</span><span class="i en">Privacy</span></a>
+      <a href="mailto:ONETAKEMUSIK@gmail.com">Contacto</a>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ ESPAÑOL ============ -->
+  <main class="i es">
+    <h1>Panel de Métricas ADAN</h1>
+    <p class="lead">Aplicación personal de análisis que lee en <strong>modo solo lectura</strong> las estadísticas del canal de YouTube de ADAN para generar reportes internos.</p>
+
+    <h2>Qué es</h2>
+    <p>Panel de Métricas ADAN es una herramienta de escritorio que corre de forma privada en el ordenador de su autor, dentro de un contenedor Docker. No es un servicio público, no crea cuentas para terceros y no se ofrece como producto a usuarios externos: la usa únicamente el equipo que gestiona el canal, con autorización del propietario del canal.</p>
+
+    <h2>Qué hace</h2>
+    <ul>
+      <li>Guarda cada hora una foto de las <strong>métricas públicas</strong> del canal (suscriptores, vistas y últimos vídeos y Shorts) usando la YouTube Data API.</li>
+      <li>Con el permiso expreso del propietario del canal, consulta la <strong>YouTube Analytics API</strong> (solo lectura) para ver retención, fuentes de tráfico, países, edad y género.</li>
+      <li>Muestra todo en un panel web local con gráficas por periodos de 24 horas, 7, 30 y 90 días, y una página de auditoría con recomendaciones.</li>
+      <li>Envía resúmenes al equipo por un bot de Telegram que solo responde a los chats autorizados.</li>
+    </ul>
+
+    <h2>Acceso a datos de Google</h2>
+    <p>La aplicación solicita acceso de <strong>solo lectura</strong> a datos de YouTube y YouTube Analytics. Nunca modifica el canal: no publica, no edita, no borra contenido y no cambia la configuración del canal. Los datos se guardan únicamente en el equipo local del autor y no se comparten con terceros. Todos los detalles están en la <a href="privacy.html">política de privacidad</a>.</p>
+
+    <div class="card">
+      <p style="margin:0"><strong>Uso limitado.</strong> El uso que Panel de Métricas ADAN hace de la información recibida de las API de Google se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Datos de Usuario de los Servicios API de Google</a>, incluidos los requisitos de <strong>Uso Limitado (Limited Use)</strong>.</p>
+    </div>
+
+    <h2>Contacto</h2>
+    <p>Para cualquier consulta sobre la aplicación o sobre el tratamiento de datos: <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>.</p>
+  </main>
+
+  <!-- ============ ENGLISH ============ -->
+  <main class="i en">
+    <h1>ADAN Metrics Panel</h1>
+    <p class="lead">A personal analytics application that reads ADAN's YouTube channel statistics in <strong>read-only mode</strong> to produce internal reports.</p>
+
+    <h2>What it is</h2>
+    <p>ADAN Metrics Panel is a desktop tool that runs privately on its author's own computer, inside a Docker container. It is not a public service, it does not create accounts for third parties, and it is not offered as a product to external users: it is used only by the team managing the channel, with the channel owner's authorization.</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Stores an hourly snapshot of the channel's <strong>public metrics</strong> (subscribers, views and the latest videos and Shorts) using the YouTube Data API.</li>
+      <li>With the channel owner's explicit consent, reads the <strong>YouTube Analytics API</strong> (read-only) for retention, traffic sources, countries, age and gender.</li>
+      <li>Displays everything in a local web dashboard with 24-hour, 7, 30 and 90-day charts, plus an audit page with recommendations.</li>
+      <li>Sends summaries to the team through a Telegram bot that only answers allow-listed chats.</li>
+    </ul>
+
+    <h2>Google data access</h2>
+    <p>The application requests <strong>read-only</strong> access to YouTube and YouTube Analytics data. It never modifies the channel: it does not publish, edit or delete content, and it does not change the channel's settings. Data is stored only on the author's local computer and is not shared with third parties. Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+    <div class="card">
+      <p style="margin:0"><strong>Limited Use.</strong> ADAN Metrics Panel's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>For any question about the application or its data handling: <a href="mailto:ONETAKEMUSIK@gmail.com">ONETAKEMUSIK@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> Panel de Métricas ADAN</span>
+    <span><a href="privacy.html"><span class="i es">Política de privacidad</span><span class="i en">Privacy policy</span></a></span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    function apply(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      var btns = document.querySelectorAll('[data-set-lang]');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].setAttribute('aria-pressed', String(btns[i].dataset.setLang === lang));
+      }
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    if (saved === 'en' || saved === 'es') { apply(saved); }
+    var btns = document.querySelectorAll('[data-set-lang]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () { apply(this.dataset.setLang); });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
