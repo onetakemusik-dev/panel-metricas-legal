@@ -18,6 +18,3 @@ Google Search Console.
 Servido con GitHub Pages desde la rama `main`, carpeta raíz. Sitio estático sin
 dependencias ni compilación: se edita el HTML y se hace commit.
 
-## Antes de publicar
-
-Sustituir `ONETAKEMUSIK@gmail.com` por el correo de contacto real en los dos archivos.
